@@ -77,12 +77,12 @@ public class Anagram {
 
 			if (code >= A && code <= Z) {
 				formattedStr += (char) (code + deltaA);
-			}
-
-			else if (code >= a && code <= z) {
+			} else if (code >= a && code <= z) {
 				formattedStr += ch;
-			}
+			} else if (ch == ' ') {
 
+				formattedStr += ' ';
+			}
 		}
 
 		return formattedStr;
