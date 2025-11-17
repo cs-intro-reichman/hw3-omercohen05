@@ -32,6 +32,9 @@ public class Anagram {
 		String s1 = preProcess(str1);
 		String s2 = preProcess(str2);
 
+		s1 = removeSpaces(s1);
+		s2 = removeSpaces(s2);
+
 		if (s1.length() != s2.length()) {
 			return false;
 		}
@@ -56,6 +59,16 @@ public class Anagram {
 		}
 
 		return true;
+	}
+
+	private static String removeSpaces(String s) {
+		String result = "";
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) != ' ') {
+				result += s.charAt(i);
+			}
+		}
+		return result;
 	}
 
 	// Returns a preprocessed version of the given string: all the letter characters
